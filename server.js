@@ -13,7 +13,7 @@ const UserLoginService = require("./src/sub-modules/user-login/user-login.servic
 
 require("dotenv").config();
 const server = express();
-const port = 3500;
+const port = process.env.PORT || 3500;
 
 server.use(cors());
 server.use(bodyParser.json());
