@@ -35,6 +35,11 @@ mongoose.connect(
   }
 );
 
+server.get(`/`, async (req, res) => {
+  console.log(`Call made to root route at "/". Returning text`);
+  res.send(`Call made to root route of task-list-app backend`);
+});
+
 server.post(`/login`, async (req, res) => {
   console.log(`Call made to /login`);
 
